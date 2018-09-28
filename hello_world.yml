@@ -1,0 +1,8 @@
+---
+- name: test echo
+  command: hostname
+  register: myout
+
+- name: print myout
+  debug:
+    msg: "Host Name: {{ myout.stdout }}"
